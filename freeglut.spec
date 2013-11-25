@@ -1,11 +1,11 @@
 Summary:	A freely licensed alternative to the GLUT library
 Name:		freeglut
-Version:	2.8.0
-Release:	2
+Version:	2.8.1
+Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/freeglut/%{name}-%{version}.tar.gz
-# Source0-md5:	5db8651af306bc403fbfd36934a20e1d
+# Source0-md5:	918ffbddcffbac83c218bc52355b6d5a
 URL:		http://freeglut.sourceforge.net/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf
