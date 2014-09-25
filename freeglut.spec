@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/.git
 Summary:	A freely licensed alternative to the GLUT library
 Name:		freeglut
 Version:	2.8.1
-Release:	1
+Release:	3
 License:	MIT
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/freeglut/%{name}-%{version}.tar.gz
@@ -45,7 +46,7 @@ Header files for freeglut library.
 %prep
 %setup -q
 
-sed -i -e 's|include progs doc|include doc|' Makefile.am
+%{__sed} -i -e 's|include progs doc|include doc|' Makefile.am
 
 %build
 %{__libtoolize}
@@ -62,6 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,7 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/{freeglut_user_interface.html,structure.html}
 %attr(755,root,root) %{_libdir}/libglut.so
-%{_libdir}/libglut.la
 %{_includedir}/GL/freeglut*.h
 %{_includedir}/GL/glut.h
 
