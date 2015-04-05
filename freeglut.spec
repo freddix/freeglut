@@ -2,7 +2,7 @@
 Summary:	A freely licensed alternative to the GLUT library
 Name:		freeglut
 Version:	2.8.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/freeglut/%{name}-%{version}.tar.gz
